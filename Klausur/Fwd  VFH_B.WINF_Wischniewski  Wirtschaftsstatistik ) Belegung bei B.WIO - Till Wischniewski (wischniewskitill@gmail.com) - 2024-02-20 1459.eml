@@ -1,0 +1,166 @@
+Return-Path: <wischniewskitill@gmail.com>
+Delivered-To: michael.wischniewski@mailbox.org
+Received: from director-03.heinlein-hosting.de ([2001:67c:2050:104:0:2:25:2])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+	by dobby25a.heinlein-hosting.de with LMTPS
+	id SIfkClSw1GUsZQEAXsRnXA
+	(envelope-from <wischniewskitill@gmail.com>)
+	for <michael.wischniewski@mailbox.org>; Tue, 20 Feb 2024 14:59:48 +0100
+Received: from mx2.mailbox.org ([2001:67c:2050:104:0:2:25:2])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+	by director-03.heinlein-hosting.de with LMTPS
+	id QMC+CVSw1GV7/gAAlScrYA
+	(envelope-from <wischniewskitill@gmail.com>)
+	for <michael.wischniewski@mailbox.org>; Tue, 20 Feb 2024 14:59:48 +0100
+Authentication-Results: spamfilter02.heinlein-hosting.de (amavisd-new);
+	dkim=pass (2048-bit key) header.d=gmail.com
+Received: from mail-ed1-x52c.google.com (mail-ed1-x52c.google.com [IPv6:2a00:1450:4864:20::52c])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mx2.mailbox.org (Postfix) with ESMTPS id 16916A0436
+	for <michael.wischniewski@mailbox.org>; Tue, 20 Feb 2024 14:59:43 +0100 (CET)
+Received: by mail-ed1-x52c.google.com with SMTP id 4fb4d7f45d1cf-563c2b2bddbso7732707a12.1
+        for <michael.wischniewski@mailbox.org>; Tue, 20 Feb 2024 05:59:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1708437582; x=1709042382; darn=mailbox.org;
+        h=date:to:references:message-id:subject:mime-version:from:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=nOffyfNbNQz25o/96u8V8TxoiruSwSEk4/AGn4JMTSA=;
+        b=JwwxfDmagiUXplPYutJeu3QPn8cmNyQHKD+pjoky6rnAGkEjfWjG4Sz3igwdtATY7h
+         CQFKGhYLlN+bXSYMd+tPBuPCDSBTOvg5uQskctZNHISI7SPm9UrOEmUw7FVvKZmTDT12
+         zc743LcTISWdCv7tiM0ZcAnTDCWlSeZ30Znf+N6ZHgD1cjozzcE+qg+XVxzOYN5ffk3V
+         MInLX9msr0zkct3dlwEjbb3okNHF36ZKJlF2A3uAjOZH4tVvDX5fX+2VQY0yH0c+J52p
+         Vd/2q1A4931Ws3RbZu8CvdXpCrHESnjvaecxuaAipa0SE+YLjVWF2gJZJ32r4I2Tgucg
+         0PSg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1708437582; x=1709042382;
+        h=date:to:references:message-id:subject:mime-version:from
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=nOffyfNbNQz25o/96u8V8TxoiruSwSEk4/AGn4JMTSA=;
+        b=e3oIWtU+OWDlf28W7PIWFpNBoTU16qoHH21UgSIf8vLLbhOWY9gwxQ5o7/ucUfbf6t
+         68rTr7Qk9QILw79rv9YpLZv3+pjuxsNFgG6ZolTBbCY67Ne/J7M0AGc58Bp10KimU/m+
+         TjGejFjkoItZ2cN0PxrA6J9EQ64hsJary3e6KfukyIP/Eft+StY3pEAvzwllyjOiVEGv
+         rKBUa9wUK4n4i3Y7xQvlty8+LciSEqwtg0pRkiiuHtfa3sj6gjJ099COhfeQpKLvGo47
+         2hsjnFm1nAuJP4tIf77xJs3vyDcfQbj5bk+tQ8yKspYgm6bsozeC72Fv54pb+xLmyozf
+         MNGw==
+X-Gm-Message-State: AOJu0YyeBbznLHZvobwgK+SDuByfovIpJnP5JuE9aXMABeb12yvMAAQ2
+	1XAhjA1wjFfRbe+7Oic+ZqnX9+8BAcpG7gPdjnBnlnWGaKsRgWCVhst+ybCz
+X-Google-Smtp-Source: AGHT+IH3wlRuG42dkh6AtFWFvx0zuuYwM0gYKaRlX3sYv350MCMlrxOvvd3IKhBbWfsHGnVUmu5N4Q==
+X-Received: by 2002:aa7:c313:0:b0:564:3f22:fb72 with SMTP id l19-20020aa7c313000000b005643f22fb72mr4708341edq.30.1708437582120;
+        Tue, 20 Feb 2024 05:59:42 -0800 (PST)
+Received: from smtpclient.apple (p5b206b01.dip0.t-ipconnect.de. [91.32.107.1])
+        by smtp.gmail.com with ESMTPSA id ev24-20020a056402541800b0056163b46393sm3662263edb.64.2024.02.20.05.59.41
+        for <michael.wischniewski@mailbox.org>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Feb 2024 05:59:41 -0800 (PST)
+From: Till Wischniewski <wischniewskitill@gmail.com>
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
+Subject: Fwd: VFH/B.WINF/Wischniewski: Wirtschaftsstatistik >> Belegung bei
+ B.WIO
+Message-Id: <1179D5BF-81A6-49FB-99AD-AB6CF4E98498@gmail.com>
+References: <e693ddae-5817-4303-cb3e-29f8f5df24d3@beuth-hochschule.de>
+To: Michael Wischniewski <michael.wischniewski@mailbox.org>
+Date: Tue, 20 Feb 2024 14:59:29 +0100
+X-Mailer: Apple Mail (2.3774.300.61.1.2)
+X-Rspamd-Queue-Id: 16916A0436
+X-MBO-SPAM-Probability: 
+X-Rspamd-Score: -7.80 / 15.00 / 15.00
+Content-Type: multipart/encrypted;
+	protocol="application/pgp-encrypted";
+	boundary="1708437588/214176/91436/dobby25a.heinlein-hosting.de"
+
+This is a MIME-encapsulated message.
+
+--1708437588/214176/91436/dobby25a.heinlein-hosting.de
+Content-Type: application/pgp-encrypted
+Content-Disposition: attachment
+
+Version: 1
+
+--1708437588/214176/91436/dobby25a.heinlein-hosting.de
+Content-Type: application/octet-stream
+Content-Disposition: inline; filename="msg.asc"
+
+-----BEGIN PGP MESSAGE-----
+
+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
+N591isOVWUM3ji29jEdkpIEA9fMDlfA=
+=d+nB
+-----END PGP MESSAGE-----
+
+--1708437588/214176/91436/dobby25a.heinlein-hosting.de--

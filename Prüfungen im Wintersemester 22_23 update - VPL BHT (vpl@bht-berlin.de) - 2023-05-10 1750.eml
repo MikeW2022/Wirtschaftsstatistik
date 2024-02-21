@@ -1,0 +1,373 @@
+Return-Path: <bht-stud-bounces@lists.bht-berlin.de>
+Received: from mx01.bht-berlin.de ([141.64.5.23])
+	by mailstore1.bht-berlin.de with LMTP
+	id 6HLAESJ+XGRLMxEATnBfsA
+	(envelope-from <bht-stud-bounces@lists.bht-berlin.de>); Thu, 11 May 2023 07:33:22 +0200
+Received: from lists.bht-berlin.de (lists.beuth-hochschule.de [141.64.5.83])
+	by mx01.bht-berlin.de (Postfix) with ESMTPS id 0C13641EA9;
+	Thu, 11 May 2023 07:29:59 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=bht-berlin.de;
+	s=dkim1-aes2048; t=1683782999;
+	h=from:from:sender:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:list-id:list-help:list-unsubscribe:
+	 list-subscribe:list-post; bh=jN6gz/tovBzloP9JFCGPj9rC7OZKlTbY1p3EIGAnqH8=;
+	b=HBCr9y73RTFB57QWVAKafemrXH9YuRwnt8y4L5Pj5jnzbz96En85RZ9jN4KihPo9BEgAfT
+	e7C6hp+7HELJh4DAf28hmC8yJS6XCRfu5hSYyKAB+k+JVwrLXChnPIv2tM09DFs0opQ2Q+
+	hNCbEDywzDWynQ+nHTaCD8VvtdUAxYnAXwzOGzlw7oM1SQ7LIJFjYcxHb0V3LOsgZcoiIS
+	tOzaBjiFsIYO7w9/AgIg8Hgkk8+cWbd4XtQHSVI7hdBpEauWqiVDp+jTzOX8uRQcpJp9ve
+	PNgVxViaNmty99RS2EkRnoSLWe5p5/m4il4+qxmDY+dp/WuiF3jGoxyF5ZPFdw==
+Received: from lists.bht-berlin.de (localhost [IPv6:::1])
+	by lists.bht-berlin.de (Postfix) with ESMTP id CA30A45963;
+	Thu, 11 May 2023 07:29:25 +0200 (CEST)
+X-Original-To: bht-stud@lists.bht-berlin.de
+Delivered-To: bht-stud@lists.bht-berlin.de
+Received: from mx02.bht-berlin.de (mx02.bht-berlin.de
+ [IPv6:2001:638:812:5::24])
+ by lists.bht-berlin.de (Postfix) with ESMTPS id A924045963
+ for <bht-stud@lists.bht-berlin.de>; Wed, 10 May 2023 17:51:00 +0200 (CEST)
+Received: from post.beuth-hochschule.de (exch3.beuth-hochschule.de
+ [IPv6:2001:638:812:12::103])
+ by mx02.bht-berlin.de (Postfix) with ESMTPS id 96D9F1FBE0
+ for <bht-stud@lists.bht-berlin.de>; Wed, 10 May 2023 17:50:58 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=bht-berlin.de;
+ s=dkim1-aes2048; t=1683733858;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type;
+ bh=jN6gz/tovBzloP9JFCGPj9rC7OZKlTbY1p3EIGAnqH8=;
+ b=YJKdp9+QfIj4eImQvB9ywgAFVqy7vuJZMPUxwuz/IesOgQVdagnGEmhgbr5XWJBBLAaD1h
+ cF2Lc9WfSxLyRmj09CM5a/pr1l4meI9jSEkVYdjMDwOQVeGip54MC/acC6QKa2n2rplfEq
+ DGvGgSsFpWuJu5/geHt9v7omfzb1h0GOSFYakDyKnQhAjCvFmG5MpbeqeiSZz0ExQQmgxY
+ m9j4svNe+fJB3L7Wa80nRb0vcY1nmdjzcMakpKKLa0seOlv8E4CD0zPJeu04FEwBYatZ3S
+ I/WbLPHaWbuTpAl9HcZ7qoLUUiLdBEL5pu0B7kaj8C1LYPfaZ38THPsbPoi1WA==
+Received: from EXCH3.beuth-hochschule.de (2001:638:812:12::103) by
+ EXCH3.beuth-hochschule.de (2001:638:812:12::103) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.1118.26; Wed, 10 May 2023 17:50:58 +0200
+Received: from EXCH3.beuth-hochschule.de ([fe80::817b:ed2c:85bb:d95e]) by
+ EXCH3.beuth-hochschule.de ([fe80::817b:ed2c:85bb:d95e%10]) with mapi id
+ 15.02.1118.026; Wed, 10 May 2023 17:50:58 +0200
+From: VPL BHT <vpl@bht-berlin.de>
+To: "bht-stud@lists.bht-berlin.de" <bht-stud@lists.bht-berlin.de>
+Subject: =?iso-8859-1?Q?Pr=FCfungen_im_Wintersemester_22/23_update?=
+Thread-Topic: =?iso-8859-1?Q?Pr=FCfungen_im_Wintersemester_22/23_update?=
+Thread-Index: AdmDVzMeCf+gNhj5QI217JnijpM1Jw==
+Date: Wed, 10 May 2023 15:50:58 +0000
+Message-ID: <e96271c4af154f07a235eb465f9f0ad4@bht-berlin.de>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-exchange-messagesentrepresentingtype: 1
+x-originating-ip: [141.64.12.127]
+x-ms-exchange-sharedmailbox-routingagent-processed: True
+x-tm-as-product-ver: SMEX-14.0.0.3092-9.0.1002-27616.005
+x-tm-as-result: No-10--23.332800-8.000000
+x-tmase-matchedrid: 2OGe8x939AJENly1KdDtFZpg8IOIewHQKQNhMboqZlp5njlQtgsok5/v
+ Lk4ECKhoNtrqBJtuOX6I40w6RysGJoc7+Qb8+03p/HTKStsDGMIIKj6WwO7KdQMuv289VbCIxUD
+ TxL3vuSBdWwRZWpipqGZhpDhdH8fM5eJ6IArLu8hitzfafzhYen6QBxLSLncwnC4ECPrC6Ehs00
+ ZQxlNz83Im7RcPYNcSswEY+Cv3V2hZpXpf6dxA/GwKW3BObMxTmRKFhwukYf2sNm4gV6sNhDojJ
+ H9oiMoVRZakW3CYjtm0oE8AQZWr5uzyID6yWmGC2lYYv0d19hkrgllOXKek1oJdlyRUJJFMHkcq
+ slK50PDlm7DiVh4vZhDILvGDRN+8XIJGLKOU9o2bUOdj+uoKuhm6i6vLD7basNzEoz97ahiDzya
+ 6tVl2YhtyCORXUE8/gksHATMFcDO7gAzWLdoW9iVZC1J4MqcVBgA+oehWZhEjfKYc5Ly0AyDldh
+ r7vqYyVfKfLDuH8o0gUPnrbGLuifqbZB3tK8zXrWL+auIGDiwFlCk+B3Ka41TRVbaw1ps6enz79
+ UxNcIyyjRIQpzyRNx2JgNkY6ni1Ud+7fVQ1KlR3IYxRexpgAMogYxpm9PTbOyxd6V963VQ5L2cX
+ qyVtpH0tCKdnhB58uME6WhSqqOHm0EqN7mnB3sR4CqSjYlsD
+x-tm-as-user-approved-sender: Yes
+x-tm-as-user-blocked-sender: No
+x-tmase-result: 10--23.332800-8.000000
+x-tmase-version: SMEX-14.0.0.3092-9.0.1002-27616.005
+x-tm-snts-smtp: DE43E73C800E23A9C598F0F8BA681CA31C6667A005A6A08BC4E38DAEF651A5E32000:8
+Content-Type: multipart/alternative;
+ boundary="_000_e96271c4af154f07a235eb465f9f0ad4bhtberlinde_"
+MIME-Version: 1.0
+X-Rspamd-UID: 24545b
+X-Mailman-Approved-At: Thu, 11 May 2023 07:29:24 +0200
+X-BeenThere: bht-stud@lists.bht-berlin.de
+X-Mailman-Version: 2.1.29
+Precedence: list
+List-Id: <bht-stud.lists.bht-berlin.de>
+List-Unsubscribe: <https://lists.bht-berlin.de/mailman/options/bht-stud>,
+ <mailto:bht-stud-request@lists.bht-berlin.de?subject=unsubscribe>
+List-Archive: <http://lists.bht-berlin.de/pipermail/bht-stud/>
+List-Post: <mailto:bht-stud@lists.bht-berlin.de>
+List-Help: <mailto:bht-stud-request@lists.bht-berlin.de?subject=help>
+List-Subscribe: <https://lists.bht-berlin.de/mailman/listinfo/bht-stud>,
+ <mailto:bht-stud-request@lists.bht-berlin.de?subject=subscribe>
+Errors-To: bht-stud-bounces@lists.bht-berlin.de
+Sender: "BHT-stud" <bht-stud-bounces@lists.bht-berlin.de>
+X-Rspamd-UID: 3247bb
+
+--_000_e96271c4af154f07a235eb465f9f0ad4bhtberlinde_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Sehr geehrte Studierende,
+
+
+
+seit Anfang April steht nun fest, dass auch f=FCr das Wintersemester 22/23 =
+die Belegungen und nicht bestandenen Pr=FCfungen nochmals nicht gez=E4hlt w=
+erden (wir informierten dar=FCber in unserer E-Mail an Sie am 06. April 202=
+3).
+
+
+
+Zu diesem Zeitpunkt war aber noch nicht klar, wie diese Entscheidung des Se=
+nats konkret bei uns an der Hochschule umgesetzt werden kann und wir konnte=
+n Sie leider noch nicht diesbez=FCglich informieren, was zu vielen Fragen f=
+=FChrte. Nach entsprechender Pr=FCfung der technischen und rechtlichen M=F6=
+glichkeiten k=F6nnen wir Ihnen nun mitteilen, dass die Umsetzung wie folgt =
+geschieht:
+
+
+
+*       Nicht bestandene Pr=FCfungsversuche aus dem WS 22/23 werden nicht g=
+ez=E4hlt und in allen F=E4llen automatisch durch Studienverwaltung in der S=
+tudiendokumentation gel=F6scht (au=DFer in F=E4llen von T=E4uschung gem=E4=
+=DF =A724 RSPO<https://www.bht-berlin.de/fileadmin/oe/pressestelle/amtliche=
+_mitteilung/2016/amtliche_mitteilung_16-2016.pdf>). Hierf=FCr m=FCssen Sie =
+nichts weiter tun.
+*       Die Belegungen aus dem WS 22/23 bleiben in der Studiendokumentation=
+ stehen, werden aber, sofern sie ein "endg=FCltig nicht bestanden" in diese=
+m oder einem folgenden Semester zur Folge haben (max. Belegungen =A713 RSPO=
+<https://www.bht-berlin.de/fileadmin/oe/pressestelle/amtliche_mitteilung/20=
+16/amtliche_mitteilung_16-2016.pdf>), nicht gez=E4hlt. In diesem Fall gilt:=
+ Auf begr=FCndeten Antrag in der Studienverwaltung wird die Belegung aus de=
+r Studiendokumentation gel=F6scht. Der Antrag ist per E-Mail von Ihrer bht-=
+Emailadresse formlos unter Angabe von Studiengang, Matrikelnummer und Begr=
+=FCndung an die f=FCr Ihren Studiengang zust=E4ndige Sachbearbeitung in der=
+ Studienverwaltung zu richten: Kontakt Studienverwaltung: BHT Berlin (bht-b=
+erlin.de)<https://www.bht-berlin.de/sv-kontakt>
+
+
+
+Viele Gr=FC=DFe
+
+D. Pumpe
+
+
+
+
+
+BERLINER HOCHSCHULE F=DCR TECHNIK
+Prof. Dr.-Ing. Dieter Pumpe
+Vizepr=E4sident f=FCr Studium, Lehre und Weiterbildung
+P201
+Luxemburger Str. 10
+13353 Berlin
+Telefon: +49 30 4504-2075
+E-Mail: vpl@bht-berlin.de
+www.bht-berlin.de<http://www.bht-berlin.de>
+
+
+
+
+--_000_e96271c4af154f07a235eb465f9f0ad4bhtberlinde_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Sans Unicode";
+	panose-1:2 11 6 2 3 5 4 2 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.E-MailFormatvorlage17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1637949843;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1140170646 1077567116 67567619 67567621 67567617 67=
+567619 67567621 67567617 67567619 67567621;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"DE" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Sehr geehrte Studierende, <o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">seit Anfang April steht nun fest, dass auch f=FCr da=
+s <b>Wintersemester 22/23</b> die Belegungen und nicht bestandenen Pr=FCfun=
+gen nochmals nicht gez=E4hlt werden (wir informierten dar=FCber in unserer =
+E-Mail an Sie am 06. April 2023).
+<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Zu diesem Zeitpunkt war aber noch nicht klar, wie di=
+ese Entscheidung des Senats konkret bei uns an der Hochschule umgesetzt wer=
+den kann und wir konnten Sie leider noch nicht diesbez=FCglich informieren,=
+ was zu vielen Fragen f=FChrte. Nach entsprechender
+ Pr=FCfung der technischen und rechtlichen M=F6glichkeiten k=F6nnen wir Ihn=
+en nun mitteilen, dass die Umsetzung wie folgt geschieht:
+<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<ul style=3D"margin-top:0cm" type=3D"disc">
+<li class=3D"MsoNormal" style=3D"mso-list:l0 level1 lfo1"><b>Nicht bestande=
+ne Pr=FCfungsversuche</b> aus dem
+<b>WS 22/23</b> werden <b>nicht gez=E4hlt</b> und in allen F=E4llen <b>auto=
+matisch</b> durch Studienverwaltung
+<b>in der</b> <b>Studiendokumentation gel=F6scht</b> (au=DFer in F=E4llen v=
+on T=E4uschung gem=E4=DF
+<a href=3D"https://www.bht-berlin.de/fileadmin/oe/pressestelle/amtliche_mit=
+teilung/2016/amtliche_mitteilung_16-2016.pdf">
+<span style=3D"color:#0563C1">=A724 RSPO</span></a>). Hierf=FCr m=FCssen Si=
+e nichts weiter tun.<o:p></o:p></li><li class=3D"MsoNormal" style=3D"mso-li=
+st:l0 level1 lfo1">Die <b>Belegungen</b> aus dem
+<b>WS 22/23</b> <b>bleiben in der Studiendokumentation stehen</b>, werden a=
+ber, sofern<b>
+</b>sie ein &#8222;endg=FCltig nicht bestanden&#8220; in diesem oder einem =
+folgenden Semester zur Folge haben<span style=3D"color:red">
+</span>(max. Belegungen <a href=3D"https://www.bht-berlin.de/fileadmin/oe/p=
+ressestelle/amtliche_mitteilung/2016/amtliche_mitteilung_16-2016.pdf">
+<span style=3D"color:#0563C1">=A713 RSPO</span></a>),<b> nicht gez=E4hlt. <=
+/b>In diesem Fall gilt:<b> Auf begr=FCndeten Antrag</b> in der Studienverwa=
+ltung wird die
+<b>Belegung aus der Studiendokumentation gel=F6scht</b>. Der <b>Antrag ist =
+per E-Mail</b> von Ihrer
+<b>bht-Emailadresse</b> formlos unter Angabe von Studiengang, Matrikelnumme=
+r und Begr=FCndung an die f=FCr Ihren Studiengang zust=E4ndige Sachbearbeit=
+ung in der Studienverwaltung zu richten:
+<a href=3D"https://www.bht-berlin.de/sv-kontakt"><span style=3D"color:#0563=
+C1">Kontakt Studienverwaltung: BHT Berlin (bht-berlin.de)</span></a><o:p></=
+o:p></li></ul>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Viele Gr=FC=DFe<o:p></o:p></p>
+<p class=3D"MsoNormal">D. Pumpe<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:9.5pt;font-family:&quot;Luc=
+ida Sans Unicode&quot;,sans-serif;color:#555555;background:white;mso-fareas=
+t-language:DE">BERLINER HOCHSCHULE F=DCR TECHNIK</span><span style=3D"font-=
+size:9.5pt;font-family:&quot;Lucida Sans Unicode&quot;,sans-serif;color:#55=
+5555;mso-fareast-language:DE"><br>
+<span style=3D"background:white">Prof. Dr.-Ing. Dieter Pumpe<br>
+Vizepr=E4sident f=FCr Studium, Lehre und Weiterbildung<i><br>
+</i>P201<br>
+Luxemburger Str. 10<br>
+13353 Berlin<br>
+Telefon: &#43;49 30 4504-2075<br>
+E-Mail: vpl@bht-berlin.de<br>
+<a href=3D"http://www.bht-berlin.de"><span style=3D"color:blue">www.bht-ber=
+lin.de</span></a><o:p></o:p></span></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_e96271c4af154f07a235eb465f9f0ad4bhtberlinde_--
